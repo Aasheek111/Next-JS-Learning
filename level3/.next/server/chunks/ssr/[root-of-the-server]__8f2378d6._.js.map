@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level3/src/app/page.js"],"sourcesContent":["'use client'\nimport React from 'react'\nimport Link from 'next/link'\nimport { useRouter } from 'next/navigation'\n\nfunction Page() {\nconst router = useRouter()\n  return (\n    <div>\n      <ul className='flex justify-evenly'>\n         <Link href=\"/\">\n         <li>Home</li>\n         </Link>\n         <Link href=\"/about\">\n         <li>About</li>\n         </Link>\n         <Link href=\"/contact\">\n         <li>Contact</li>\n         </Link>\n      </ul>\n      <button onClick={()=>router.push('/about')} >\nTO ABOUT\n      </button>\n\n    </div>\n  )\n}\n\nexport default Page"],"names":[],"mappings":";;;;;AACA;AACA;AACA;AAHA;;;;;AAKA,SAAS;IACT,MAAM,SAAS,IAAA,+IAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;gBAAG,WAAU;;kCACX,8OAAC,uKAAI;wBAAC,MAAK;kCACX,cAAA,8OAAC;sCAAG;;;;;;;;;;;kCAEJ,8OAAC,uKAAI;wBAAC,MAAK;kCACX,cAAA,8OAAC;sCAAG;;;;;;;;;;;kCAEJ,8OAAC,uKAAI;wBAAC,MAAK;kCACX,cAAA,8OAAC;sCAAG;;;;;;;;;;;;;;;;;0BAGP,8OAAC;gBAAO,SAAS,IAAI,OAAO,IAAI,CAAC;0BAAY;;;;;;;;;;;;AAMnD;uCAEe","debugId":null}}]
+}

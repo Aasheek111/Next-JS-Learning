@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level2/src/app/hello/page.jsx"],"sourcesContent":["import React from 'react'\n\nfunction hello() {\n  return (\n    <div>AASHEEK</div>\n  )\n}\n\nexport default hello"],"names":[],"mappings":";;;;;AAAA;;;AAEA,SAAS;IACP,qBACE,8OAAC;kBAAI;;;;;;AAET;uCAEe","debugId":null}}]
+}

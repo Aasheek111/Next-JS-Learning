@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level2/src/app/hello/layout.js"],"sourcesContent":["\n\nexport default function Aboutlayout({ children }) {\n  return (\n    <html lang=\"en\">\n      <body\n      >\n        <nav>\n          I am hello layout\n        </nav>\n        \n        {children}\n      </body>\n    </html>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAEe,SAAS,YAAY,EAAE,QAAQ,EAAE;IAC9C,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;;8BAEC,8OAAC;8BAAI;;;;;;gBAIJ;;;;;;;;;;;;AAIT","debugId":null}}]
+}

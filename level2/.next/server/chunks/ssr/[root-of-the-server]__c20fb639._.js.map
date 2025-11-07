@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level2/src/app/dynamic/%5Buser%5D/page.jsx"],"sourcesContent":["import React from 'react'\n\nasync function page({params}) {\n    const user=params.user;\n\n  return (\n    <div>Welcome {user}</div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;AAAA;;;AAEA,eAAe,KAAK,EAAC,MAAM,EAAC;IACxB,MAAM,OAAK,OAAO,IAAI;IAExB,qBACE,8OAAC;;YAAI;YAAS;;;;;;;AAElB;uCAEe","debugId":null}}]
+}

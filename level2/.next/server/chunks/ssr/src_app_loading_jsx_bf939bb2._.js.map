@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level2/src/app/loading.jsx"],"sourcesContent":["import React from 'react'\n\nfunction loading() {\n  return (\n    <div>loading......</div>\n  )\n}\n\nexport default loading"],"names":[],"mappings":";;;;;AAAA;;;AAEA,SAAS;IACP,qBACE,8OAAC;kBAAI;;;;;;AAET;uCAEe","debugId":null}}]
+}

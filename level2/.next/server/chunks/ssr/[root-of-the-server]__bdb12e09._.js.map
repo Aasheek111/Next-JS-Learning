@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///Users/aashikgautam/Documents/Web%20Development/NEXT%20JS/level2/src/app/%5B...catchall%5D/page.jsx"],"sourcesContent":["import React from 'react'\n\nasync function page({params}) {\nconst pars=await params;\n    console.log(pars.catchall[1])\n  return (\n    <div>Catch Me</div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;AAAA;;;AAEA,eAAe,KAAK,EAAC,MAAM,EAAC;IAC5B,MAAM,OAAK,MAAM;IACb,QAAQ,GAAG,CAAC,KAAK,QAAQ,CAAC,EAAE;IAC9B,qBACE,8OAAC;kBAAI;;;;;;AAET;uCAEe","debugId":null}}]
+}
