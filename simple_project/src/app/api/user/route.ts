@@ -1,15 +1,15 @@
+
 import connectDB from "@/lib/db";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
-import authOptions from "../auth/[...nextauth]/auth";
+import authOptions from "@/lib/auth";
 import User from "@/model/user.model";
 
 export async function GET(req: NextRequest) {
   try {
     await connectDB();
-    const session = getServerSession(authOptions);
-
-    if (!session) {
+    const session = await getServerSession(authOptions);
+    if (!session || !session.user) {
       return NextResponse.json({
         message: "Unauthorized",
         status: 401,
@@ -23,13 +23,16 @@ export async function GET(req: NextRequest) {
         status: 404,
       });
     }
-    return NextResponse.json({
-      message: "User found",
-      user,
-      status: 200,
-    });
+    return NextResponse.json(
+      {
+        message: "User found",
+        user,
+      },
+      {
+        status: 200,
+      }
+    );
   } catch (error) {
-
     return NextResponse.json({
       message: "Something went wrong",
       status: 500,

@@ -1,14 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import { MdModeEditOutline } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { userContext } from "./context/UserContext";
 function page() {
-  const { data } = useSession();
+
+  const data=useContext(userContext);
+  console.log(data) 
   const router = useRouter();
 
-  console.log(data?.user.image);
 
   async function handelSignout() {
     try {
@@ -25,7 +27,7 @@ function page() {
 
         onClick={()=>router.push('/edit')}/>
 
-        {data?.user.image && (
+        {data?.user?.image && (
           <Image
             src={data.user.image}
             alt="loading.."
@@ -34,7 +36,7 @@ function page() {
             className=" rounded-4xl"
           />
         )}
-        {data && <p className="text-white">Welcome {data.user?.name}</p>}
+        {data && <p className="text-white">Welcome {data?.user?.username}</p>}
         {!data && <p className="text-white">Lauding......</p>}
 
         {data && (

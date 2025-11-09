@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 import uploadCloudinary from "@/lib/cloudinary";
 import User from "@/model/user.model";
-import authOptions from "../auth/[...nextauth]/auth";
+import authOptions from "../../../lib/auth";
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,14 +19,14 @@ export async function POST(req: NextRequest) {
     const name = formData.get("name") as string;
     const file = formData.get("file") as Blob;
 
-    let imageUrl = session.user.image ?? null;
+    let imageUrl ;
 
     if (file) {
       imageUrl = await uploadCloudinary(file);
     }
 
     const user = await User.findOneAndUpdate(
-      {_id:session.user.id},
+      { _id: session.user.id },
       {
         name,
         image: imageUrl,

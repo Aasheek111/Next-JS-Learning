@@ -1,13 +1,15 @@
-"use client";
+'use client'
 import axios from "axios";
-import { set } from "mongoose";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 
+
 import React, { useEffect, useRef, useState } from "react";
+import { useUser } from "../context/UserContext";
 
 function page() {
-  const { data } = useSession();
+
+  const  data  = useUser();
   const [user, setUser] = useState("");
   const [imag, setImg] = useState("");
   const [backendImage, setBackendImage] = useState<File>();
@@ -15,8 +17,8 @@ function page() {
 
   useEffect(() => {
     if (data) {
-      setUser(data?.user.name as string);
-      setImg(data?.user.image as string);
+      setUser(data?.user?.name as string);
+      setImg(data?.user?.image as string);
     }
   }, [data]);
 
@@ -36,11 +38,13 @@ function page() {
     try {
       const formData = new FormData();
       formData.append("name", user);
+
       if (backendImage) {
         formData.append("file", backendImage);
       }
       const result =await  axios.post('/api/edit',formData);
       console.log(result);
+      data.setUser(result.data.user)
 
     } catch (error) {
       console.log(error);
