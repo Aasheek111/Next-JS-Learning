@@ -27,15 +27,18 @@ function page() {
 
         onClick={()=>router.push('/edit')}/>
 
+<div className="rounded-[100%] overflow-hidden ">
+
         {data?.user?.image && (
           <Image
-            src={data.user.image}
-            alt="loading.."
-            height={100}
-            width={100}
-            className=" rounded-4xl"
+          src={data.user.image}
+          alt="loading.."
+          height={100}
+          width={100}
+          className=" rounded-[100%"
           />
         )}
+        </div>
         {data && <p className="text-white">Welcome {data?.user?.username}</p>}
         {!data && <p className="text-white">Lauding......</p>}
 

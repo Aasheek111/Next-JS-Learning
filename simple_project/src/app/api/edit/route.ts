@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     }
 
     const formData = await req.formData();
-    const name = formData.get("name") as string;
+    const username = formData.get("username") as string;
     const file = formData.get("file") as Blob;
 
     let imageUrl ;
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     const user = await User.findOneAndUpdate(
       { _id: session.user.id },
       {
-        name,
+        username,
         image: imageUrl,
       },
       { new: true }
